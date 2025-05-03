@@ -1,0 +1,201 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\geometry{a4paper, margin=1in}
+\titleformat{\section}{\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection}{1em}{}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue
+}
+\definecolor{degenblue}{RGB}{0, 102, 204}
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    {\Huge\bfseries Solana Raffle Whitepaper\par}
+    \vspace{1cm}
+    {\Large The Decentralized Raffle Revolution on Solana\par}
+    \vspace{2cm}
+    {\large Version 1.0 | May 2025\par}
+    \vspace{1cm}
+    {\large Solana Raffle Team\par}
+    \vfill
+    {\small \url{URL HERE} | \url{https://discord.gg/solana raffle} | \url{https://x.com/solana raffle}\par}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction: The Degen Revolution Begins}
+Welcome to \textbf{Solana Raffle}, the premier decentralized raffle platform on Solana, where degens, dreamers, and doers unite to create, win, and thrive. Unlike centralized platforms that gatekeep profits and obscure operations, Solana Raffle is a trustless, permissionless ecosystem designed to empower users. Built on Solana’s high-performance blockchain, we redefine raffles with crypto-only prizes, automated payouts, and a community-first ethos.
+
+Our mission is to enable every user to launch raffles, stack SOL, and shape the platform’s future. For the first three months, we take \textbf{zero profit}, reinvesting all fees into community rewards. With free testnet tickets, meme coin calls, and governance, Solana Raffle is a movement where early adopters are guaranteed to profit. This whitepaper outlines why Solana Raffle is the Solana printer degens have been craving.
+
+\section{The Problem: Centralized Raffles Are a Scam}
+Centralized raffle platforms, such as \href{https://degendraw.vercel.app/}{Degendraw}, fail the crypto community:
+\begin{itemize}
+    \item \textbf{Centralized Control}: Platforms manage raffles, sidelining users from creative or financial control.
+    \item \textbf{Opaque Operations}: Degendraw’s lack of active raffles and vague mechanics raises trust concerns.
+    \item \textbf{Limited Features}: No user-generated content or community incentives, resulting in a stale experience.
+    \item \textbf{Regulatory Risks}: Mixing fiat or physical prizes invites legal scrutiny, hindering innovation.
+\end{itemize}
+Degens need a transparent, decentralized platform that maximizes profit and engagement.
+
+\section{The Solution: Solana Raffle Decentralized Dream}
+Solana Raffle addresses these issues with a robust, user-centric design:
+\begin{itemize}
+    \item \textbf{User-Created Raffles}: For a 0.05 SOL fee, users create raffles and keep 90\% of ticket sales (post-initial phase).
+    \item \textbf{Secure Escrow}: Funds are locked in a smart contract, ensuring payouts or refunds.
+    \item \textbf{Monthly Mega Raffle}: Every ticket enters a free monthly draw, funded by 20\% of fees.
+    \item \textbf{Crypto-Only Prizes}: SOL, tokens, and NFTs avoid regulatory issues.
+    \item \textbf{Skill-Based Trivia}: A crypto quiz adds fun and legal clarity.
+\end{itemize}
+Unlike Degendraw’s minimal setup, Solana Raffle is a dynamic ecosystem driven by its community.
+
+\section{Key Features: Why Degens Will Love Solana Raffle}
+\subsection{User-Created Raffles}
+\begin{itemize}
+    \item \textbf{Low Barrier}: A 0.05 SOL fee ensures accessibility while preventing spam.
+    \item \textbf{Profit Power}: Creators retain 90\% of sales, incentivizing promotion.
+    \item \textbf{Flexibility}: Customize ticket prices, durations, and prize types.
+\end{itemize}
+
+\subsection{Fort Knox Escrow}
+\begin{itemize}
+    \item \textbf{Trustless Security}: Funds are verifiable on-chain.
+    \item \textbf{Riskless Refunds}: Automatic refunds if raffles fail.
+    \item \textbf{Transparency}: Public transactions build trust.
+\end{itemize}
+
+\subsection{Monthly Mega Raffle}
+\begin{itemize}
+    \item \textbf{Free Entry}: Every ticket qualifies for the monthly draw.
+    \item \textbf{Big Wins}: 20\% of fees fund SOL and NFT prizes.
+    \item \textbf{Fair Play}: ORAO VRF ensures provable fairness.
+\end{itemize}
+
+\subsection{Crypto-Only Prizes}
+\begin{itemize}
+    \item \textbf{Pure Blockchain}: Instant payouts in SOL, tokens, or NFTs.
+    \item \textbf{Regulatory Clarity}: Mimics meme coin disclaimers.
+    \item \textbf{Automation}: Smart contracts handle distributions.
+\end{itemize}
+
+\subsection{Trivia for Skill}
+\begin{itemize}
+    \item \textbf{Engaging Entry}: Crypto quizzes add a skill-based layer.
+    \item \textbf{Degen Flavor}: Questions like “Which meme coin mooned first?” keep it fun.
+    \item \textbf{Legal Edge}: Classifies raffles as skill-based.
+\end{itemize}
+
+\subsection{Meme Coin Integration}
+\begin{itemize}
+    \item \textbf{Swap and Play}: Convert Solana tokens via Jupiter’s API (2\% fee).
+    \item \textbf{Revive Shitcoins}: Turn low-value tokens into raffle tickets.
+    \item \textbf{Seamless UX}: Frontend simplifies swaps.
+\end{itemize}
+
+\section{Technical Architecture: Built to Moon}
+Solana Raffle leverages Solana’s high-performance blockchain:
+\begin{itemize}
+    \item \textbf{Blockchain}: Solana, with 65,000 TPS and low fees, outpaces Base’s Ethereum L2.
+    \item \textbf{Smart Contracts}: Rust with Anchor, adapted from \href{https://github.com/kobby-pentangeli/solana-escrow}{open-source escrow} and \href{https://github.com/microgift/nft-raffle}{raffle logic}.
+    \item \textbf{Randomness}: ORAO VRF for fair winner selection.
+    \item \textbf{Frontend}: React with Tailwind CSS, hosted on Vercel.
+    \item \textbf{Meme Coin Swaps}: Jupiter API for token conversions.
+    \item \textbf{Escrow}: Trustless fund management for SOL and NFTs.
+\end{itemize}
+
+\section{Tokenomics: A Community-First Future}
+Solana Raffle launches without a token, focusing on core functionality:
+\begin{itemize}
+    \item \textbf{Presale Access}: Early adopters get priority in future token sales.
+    \item \textbf{Governance}: Token holders vote on fees and features via Discord.
+    \item \textbf{Staking Perks}: Stake for profit shares or exclusive raffles.
+    \item \textbf{Transparency}: Community updates shape the token’s path.
+\end{itemize}
+
+\section{Roadmap: From Hype to Hypergrowth}
+\begin{itemize}
+    \item \textbf{Phase 1: Community Ignition (Q2 2025)}: Develop project with community involvement and feedback, launch X campaign with testnet tickets.
+    \item \textbf{Phase 2: Testnet Trials (Q3 2025)}: Deploy 10 raffles at 0.1 SOL prizes, gather feedback.
+    \item \textbf{Phase 3: Mainnet Launch (Q4 2025)}: Launch with 5 raffles, 1 SOL prizes, free entry.
+    \item \textbf{Phase 4: Token and Governance (Q2 2026)}: Token presale and governance activation.
+\end{itemize}
+
+\section{Community: The Heart of Solana Raffle}
+\begin{itemize}
+    \item \textbf{Zero Profit for 3 Months}: Fees fund rewards, ensuring early profits.
+    \item \textbf{Free Testnet Tickets}: Risk-free trials with burner wallets.
+    \item \textbf{Giveaways and Calls}: Meme coin tips, NFT drops, and shoutouts.
+    \item \textbf{Governance Voice}: Idea-dump channels and polls.
+    \item \textbf{Raiding and Shilling}: Amplify raffles together.
+\end{itemize}
+
+\section{Marketing: Hype That Hits Different}
+\begin{itemize}
+    \item \textbf{Pre-Launch}: X posts and Discord invites with free tickets.
+    \item \textbf{Testnet Phase}: 10 raffles, 0.1 SOL prizes, burner wallet testing.
+    \item \textbf{Launch Week}: 5 raffles, 1 SOL each, free entry.
+    \item \textbf{Ongoing}: Promote top raffles, host giveaways.
+\end{itemize}
+
+\section{Security: Trust Earned, Not Assumed}
+\begin{itemize}
+    \item \textbf{Audited Contracts}: Vetted by firms like CertiK.
+    \item \textbf{Open Source}: Verify code on \href{https://github.com/kobby-pentangeli/solana-escrow}{GitHub}.
+    \item \textbf{Escrow Lock}: Funds are secure until resolved.
+    \item \textbf{VRF Fairness}: ORAO ensures fair draws.
+    \item \textbf{Burner Wallet Testing}: Zero-risk trials.
+\end{itemize}
+
+\section{Comparison to Degendraw}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|p{6cm}|p{6cm}|}
+\hline
+\textbf{Feature} & \textbf{Solana Raffle} & \textbf{Degendraw} (\href{https://degendraw.vercel.app/}{Degendraw Website}) \\
+\hline
+\textbf{Blockchain} & Solana (fast, cheap) & Base (Ethereum L2, slower) \\
+\hline
+\textbf{Raffle Creation} & User-created, 0.05 SOL fee & Likely platform-managed \\
+\hline
+\textbf{Prize Funding} & Ticket sales (90\% to winner/creator), NFTs deposited & Unclear, uses bsETH \\
+\hline
+\textbf{Community Features} & Monthly raffle, governance, giveaways & None visible \\
+\hline
+\textbf{Skill Element} & Trivia for legal entry & None, pure chance \\
+\hline
+\textbf{Meme Coin Support} & Swap any Solana token & Limited to bsETH \\
+\hline
+\textbf{Transparency} & Open-source, audited, on-chain escrow & Minimal details \\
+\hline
+\end{tabular}
+\caption{Solana Raffle vs. Degendraw: Feature Comparison}
+\end{table}
+
+\section{Conclusion: The Solana Printer Awaits}
+Solana Raffle is the decentralized raffle platform degens crave—a trustless, profit-packed ecosystem on Solana. Unlike Degendraw’s barebones attempt, we offer a community where creators and players win big. With zero profit for three months, free testnet trials, and a future token, early adopters will stack SOL and shape the future.
+
+Join the revolution. Subscribe at our landing page, jump into Discord for meme coin calls, and follow us on X. Test with burner wallets, win with confidence, and let’s print SOL together.
+
+\section{Call to Action}
+\begin{itemize}
+    \item \textbf{Landing Page}: [Insert Link]—Sign up for updates and testnet access.
+    \item \textbf{Discord}: [Insert Link]—Join for giveaways and governance.
+    \item \textbf{X}: [Insert Link]—Follow for raffles and shills.
+\end{itemize}
+
+\textbf{Solana Raffle: Where degens draw, win, and rise.}
+\end{document}
